@@ -64,27 +64,27 @@ const Problem1 = () => {
           <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li className="nav-item">
               <button
-                className={`nav-link ${show === "all" && "active"}`}
+                className={`nav-link ${show === "All" && "active"}`}
                 type="button"
-                onClick={() => handleClick("all")}
+                onClick={() => handleClick("All")}
               >
                 All
               </button>
             </li>
             <li className="nav-item">
               <button
-                className={`nav-link ${show === "active" && "active"}`}
+                className={`nav-link ${show === "Active" && "active"}`}
                 type="button"
-                onClick={() => handleClick("active")}
+                onClick={() => handleClick("Active")}
               >
                 Active
               </button>
             </li>
             <li className="nav-item">
               <button
-                className={`nav-link ${show === "completed" && "active"}`}
+                className={`nav-link ${show === "Completed" && "active"}`}
                 type="button"
-                onClick={() => handleClick("completed")}
+                onClick={() => handleClick("Completed")}
               >
                 Completed
               </button>
@@ -100,7 +100,7 @@ const Problem1 = () => {
             </thead>
             <tbody>
               {sortedTasks.map((task, index) => {
-                if (show === "all" || task.status === show) {
+                if (show === "All" || task.status === show) {
                   return (
                     <tr key={index}>
                       <td>{task.name}</td>
